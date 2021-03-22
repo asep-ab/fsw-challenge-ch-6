@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batu Kertas Gunting</title>
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/css/game-rps.css">
+
+
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+    <!-- navbar -->
+    <!-- <div class="container-fluid navbar-top">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" alt="logo" width="30" height="24" class="logo d-inline align-top">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav">
+                        <a class="text-title d-inline-block "> ROCK PAPER SCISSORS</a>
+                        <a class="text-title d-inline-block "> ROCK PAPER SCISSORS</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </div> -->
+    <!-- end of navbar -->
+
+    <!-- Navbar -->
+    <div class="container-fluid navbar-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+                <div class="navbar-nav">
+                    <a href="/home" class="nav-link icon-back">
+                        <i class="fas fa-chevron-left" style="font-size: 30px;"></i>
+                    </a>
+                </div>
+                <!-- </div> -->
+                <a class="navbar-brand" href="#"><img src="/img/rock-paper-scissors/logo.png" alt="logo" width="50" height="50"
+                        class="logo d-inline align-top"></a>
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <b class="text-title d-inline-block align-top">ROCK PAPER SCISSORS</b>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End of Navbar -->
+
+    <div class="score-board">
+        <div id="player-label" class="badge"></div>
+        <div id="com-label" class="badge"></div>
+        <span id="player-score">0</span>:<span id="com-score">0</span>
+    </div>
+
+
+    <!-- GAME CONTENT -->
+    <!-- Text Player & Com -->
+    <div class="container title-player-com">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 align-self-center">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <span>PLAYER 1</span>
+                    </div>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <span>COM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+    <!-- Rock Paper Scissors  -->
+    <div class="container image-player-com">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 align-self-center">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <button type="button" class="btn choice btn-player-rock" id="r">
+                            <div class="choice rectangle-rock-player" id="r"></div>
+                        </button>
+                        <button type="button" class="btn choice btn-player-paper" id="p">
+                            <div class="choice rectangle-paper-player" id="p"></div>
+                        </button>
+                        <button type="button" class="btn choice btn-player-scissors" id="s">
+                            <div class="choice rectangle-scissors-player" id="s"></div>
+                        </button>
+                    </div>
+                    <div class="col-lg-4 align-self-center">
+                        <div class="text-versus" id="result">VS</div>
+                    </div>
+                    <div class="col-lg-4">
+                        <button type="button" class="btn choice btn-player-rock com-rock" id="r-com">
+                            <div class="choice rectangle-rock-com" id="r-com"></div>
+                        </button>
+                        <button type="button" class="btn choice btn-player-paper com-paper" id="p-com">
+                            <div class="choice rectangle-paper-com com-paper" id="p-com"></div>
+                        </button>
+                        <button type="button" class="btn choice btn-player-scissors com-scissors" id="s-com">
+                            <div class="choice rectangle-scissors-com com-scissors" id="s-com"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+    <!-- Refresh Game -->
+    <div class="container game-refresh">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 align-self-center">
+                <button type="button" class="btn btn-refresh refresh"><i class="fas fa-sync refresh"
+                        style="font-size: 40pt;"></i></button>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+    <!-- END OF GAME CONTENT -->
+
+    <!-- <script type="text/javascript">
+        what();
+
+        function what() {
+            document.getElementById('hello').innerHTML = 'hi';
+        };
+    </script> -->
+</body>
+
+<script src="/script/game-rps.js"></script>
+
+<!-- javascript -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+</script>
+
+</html>

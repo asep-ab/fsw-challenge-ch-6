@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+  }
+
+  .container-fluid.form-container {
+    padding-top: 2em;
+    /* padding: 2em, 2em, 2em ; */
+  }
+
+  .form-bg {
+    background-image: url('../img/form-bg.png'); 
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+  }
+
+  .btn.btn-primary {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border-color: white;
+  }
+
+  h1 {
+    font-size: 40px;
+    color: orange;
+  }
+  label {
+    background-color: black;
+    color: white;
+    padding-right: 1em;
+  }
+
+  .alert {
+      font-weight: bold;
+  }
